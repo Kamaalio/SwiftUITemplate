@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TemplateApp: App {
+struct {{cookiecutter.app_name}}App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

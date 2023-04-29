@@ -9,5 +9,9 @@
     "python.terminal.activateEnvironment": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.linting.enabled": true,
-    "python.linting.lintOnSave": true
+    "python.linting.lintOnSave": true,
+    "cSpell.words": [
+        "Farah",
+        "kamaal"
+    ]
 }
