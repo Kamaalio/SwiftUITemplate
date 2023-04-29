@@ -2,20 +2,19 @@
 //  ContentView.swift
 //  {{cookiecutter.app_name}}
 //
-//  Created by Kamaal M Farah on 29/04/2023.
+//  Created by {{cookiecutter.full_name}} on {{cookiecutter.creation_date}}.
 //
 
 import SwiftUI
+import KamaalNavigation
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationStackView(
+            stack: [] as [Screens],
+            root: { screen in MainView(screen: screen) },
+            subView: { screen in MainView(screen: screen, displayMode: .inline) },
+            sidebar: { Sidebar() })
     }
 }
 

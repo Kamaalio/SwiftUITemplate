@@ -1,0 +1,4 @@
+# justfile
+
+localize:
+    node Scripts/generateLocales.js

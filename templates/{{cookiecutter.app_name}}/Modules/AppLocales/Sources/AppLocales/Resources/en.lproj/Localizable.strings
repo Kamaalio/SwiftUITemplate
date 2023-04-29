@@ -1,0 +1,11 @@
+/*
+  Localizable.strings
+
+
+  Created by {{cookiecutter.full_name}} on {{cookiecutter.creation_date}}.
+
+*/
+
+"HOME" = "Home";
+"SCENES" = "Scenes";
+"TOGGLE_SIDEBAR" = "Toggle sidebar";
