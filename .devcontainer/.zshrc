@@ -13,3 +13,5 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias bat=batcat
+
+export PATH=$HOME/.local/bin:$PATH
