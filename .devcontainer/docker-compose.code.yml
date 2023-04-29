@@ -1,0 +1,11 @@
+# 👉 Rebuild this dev container to have these changes reflected
+
+services:
+  code:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    container_name: xcode-templates
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
