@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Template
+//  {{cookiecutter.app_name}}
 //
 //  Created by Kamaal M Farah on 29/04/2023.
 //
