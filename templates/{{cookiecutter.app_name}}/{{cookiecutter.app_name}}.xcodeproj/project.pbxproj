@@ -25,6 +25,7 @@
 		2C6BAC1529FD62F300009E19 /* KamaalPopUp in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6BAC1429FD62F300009E19 /* KamaalPopUp */; };
 		2C6BAC1829FD63B900009E19 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BAC1729FD63B900009E19 /* HomeScreen.swift */; };
 		2C6BAC1A29FD643500009E19 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BAC1929FD643500009E19 /* Sidebar.swift */; };
+		2C6BAC1F29FD6A8200009E19 /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6BAC1E29FD6A8200009E19 /* Backend */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,9 @@
 		2C6BAC1229FD62D600009E19 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2C6BAC1729FD63B900009E19 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		2C6BAC1929FD643500009E19 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		2C6BAC1B29FD662D00009E19 /* CDPersist */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CDPersist; sourceTree = "<group>"; };
+		2C6BAC1C29FD665900009E19 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
+		2C6BAC1D29FD69D500009E19 /* Backend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Backend; sourceTree = "<group>"; };
 		2CB0272629FD58DF0000F5AD /* {{cookiecutter.app_name}}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "{{cookiecutter.app_name}}.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,6 +60,7 @@
 				2C6BABFD29FD5CCD00009E19 /* KamaalSettings in Frameworks */,
 				2C6BABFB29FD5CCD00009E19 /* KamaalNavigation in Frameworks */,
 				2C6BAC1529FD62F300009E19 /* KamaalPopUp in Frameworks */,
+				2C6BAC1F29FD6A8200009E19 /* Backend in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +125,10 @@
 		2C6BAC0C29FD5F7400009E19 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C6BAC1D29FD69D500009E19 /* Backend */,
 				2C6BAC0D29FD5F8E00009E19 /* AppLocales */,
+				2C6BAC1B29FD662D00009E19 /* CDPersist */,
+				2C6BAC1C29FD665900009E19 /* Models */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 				2C6BABFE29FD5CCD00009E19 /* KamaalUI */,
 				2C6BAC0F29FD605200009E19 /* AppLocales */,
 				2C6BAC1429FD62F300009E19 /* KamaalPopUp */,
+				2C6BAC1E29FD6A8200009E19 /* Backend */,
 			);
 			productName = Template;
 			productReference = 2CB0272629FD58DF0000F5AD /* {{cookiecutter.app_name}}.app */;
@@ -520,6 +529,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C6BABF529FD5CCD00009E19 /* XCRemoteSwiftPackageReference "KamaalSwift" */;
 			productName = KamaalPopUp;
+		};
+		2C6BAC1E29FD6A8200009E19 /* Backend */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Backend;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
