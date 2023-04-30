@@ -8,6 +8,7 @@
 import SwiftUI
 import KamaalUI
 import KamaalPopUp
+import KamaalSettings
 import KamaalNavigation
 
 struct MainView: View {
@@ -26,11 +27,21 @@ struct MainView: View {
             switch screen {
             case .home:
                 HomeScreen()
+            case .settings:
+                AppSettingsScreen()
             }
         }
         .ktakeSizeEagerly()
         .navigationTitle(title: screen.title, displayMode: displayMode)
         .withKPopUp(popperUpManager)
+    }
+}
+
+struct AppSettingsScreen: View {
+    @EnvironmentObject private var userData: UserData
+
+    var body: some View {
+        SettingsScreen(configuration: userData.settingsConfiguration)
     }
 }
 

@@ -37,12 +37,14 @@ public class CoreItem: NSManagedObject, ManuallyManagedObject, Identifiable, Cor
         try create(payload, from: context, save: true)
     }
 
-    public static func create(_ payload: Payload, from controller: PersistenceController,
+    public static func create(_ payload: Payload,
+                              from controller: PersistenceController,
                               save: Bool) throws -> CoreItem {
         let item = CoreItem(context: controller.context)
             .updateValues(payload)
 
-        let now = Date()
+        item.updateDate = Date()
+        item.id = UUID()
 
         if save {
             try controller.context.save()
@@ -52,8 +54,7 @@ public class CoreItem: NSManagedObject, ManuallyManagedObject, Identifiable, Cor
     }
 
     func updateValues(_: Payload) -> CoreItem {
-        let now = Date()
-        updateDate = now
+        updateDate = Date()
 
         return self
     }
