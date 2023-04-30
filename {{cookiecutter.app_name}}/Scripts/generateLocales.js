@@ -31,8 +31,7 @@ const localizableFileTemplate = (input) => {
 
 */
 
-${input}
-`;
+${input}`;
 };
 
 const main = () => {

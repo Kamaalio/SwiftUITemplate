@@ -1,4 +1,5 @@
 # justfile
 
 localize:
+    yarn
     node Scripts/generateLocales.js

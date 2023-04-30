@@ -11,6 +11,8 @@
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
     "cSpell.words": [
+        "Appledoe",
+        "cookiecutter",
         "Farah",
         "gitmodules",
         "kamaal"

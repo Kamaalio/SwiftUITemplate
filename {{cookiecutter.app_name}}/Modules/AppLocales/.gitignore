@@ -7,3 +7,5 @@ DerivedData/
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+Sources/AppLocales/Resources/en.lproj
+Sources/AppLocales/Keys.swift
