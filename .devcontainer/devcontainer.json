@@ -1,6 +1,6 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 {
-	"name": "Xcode Templates",
+	"name": "SwiftUI Template",
 	"dockerComposeFile": [
 		"docker-compose.code.yml"
 	],

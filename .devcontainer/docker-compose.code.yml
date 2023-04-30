@@ -5,7 +5,7 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    container_name: xcode-templates
+    container_name: swiftui-template-code
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity

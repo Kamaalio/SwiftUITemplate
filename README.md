@@ -1,4 +1,4 @@
-# Xcode Templates
+# SwiftUI Template
 
 ## Prerequisites
 
@@ -7,5 +7,5 @@ Install Cookiecutter [here](https://cookiecutter.readthedocs.io/en/stable/instal
 ## Usage
 
 ```shell
-cookiecutter gh:kamaal111/SwiftUITemplate
+cookiecutter gh:Kamaalio/SwiftUITemplate
 ```
