@@ -12,6 +12,7 @@
     "python.linting.lintOnSave": true,
     "cSpell.words": [
         "Farah",
+        "gitmodules",
         "kamaal"
     ]
 }
