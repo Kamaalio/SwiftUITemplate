@@ -1,8 +1,11 @@
 # Xcode Templates
 
-## Configuration
+## Prerequisites
 
-- app_identifier
-- app_name
-- creation_date
-- full_name
+Install Cookie cutter [here](https://cookiecutter.readthedocs.io/en/stable/installation.html)
+
+## Usage
+
+```shell
+cookiecutter gh:kamaal111/SwiftUITemplate
+```
