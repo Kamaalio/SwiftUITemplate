@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  createTemplate:
+    name: Create template
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: taiki-e/install-action@just
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Setup python environment
+        run: |
+          just setup-dev-env
+
+      - name: Create template
+        run: |
+          just create-template

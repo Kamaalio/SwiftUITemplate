@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/Kamaalio/KamaalSwift.git", "0.2.0" ..< "0.3.0"),
+        .package(url: "https://github.com/Kamaalio/KamaalSwift.git", "0.2.2" ..< "0.3.0"),
         .package(path: "../Models"),
     ],
     targets: [

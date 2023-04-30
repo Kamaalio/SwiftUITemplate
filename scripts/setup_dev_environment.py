@@ -14,5 +14,7 @@ if install_poetry_status != 0:
 virtual_env.execute_binary("poetry", "install")
 
 replace_zsh_conf = os.getenv("REPLACE_ZSH_CONF")
-if replace_zsh_conf and replace_zsh_conf.lower() in ["true", "yes"]:
+if replace_zsh_conf and replace_zsh_conf.lower() in ["true", "yes", "y"]:
     subprocess.Popen(["zsh", "scripts/setup_zsh_environment.zsh"]).wait()
+
+print("Done setting up the environment")
