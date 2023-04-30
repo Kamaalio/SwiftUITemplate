@@ -9,16 +9,19 @@ let package = Package(
     products: [
         .library(
             name: "AppLocales",
-            targets: ["AppLocales"]),
+            targets: ["AppLocales"]
+        ),
     ],
     dependencies: [],
     targets: [
         .target(
             name: "AppLocales",
             dependencies: [],
-            resources: [.process("Resources")]),
+            resources: [.process("Resources")]
+        ),
         .testTarget(
             name: "AppLocalesTests",
-            dependencies: ["AppLocales"]),
+            dependencies: ["AppLocales"]
+        ),
     ]
 )

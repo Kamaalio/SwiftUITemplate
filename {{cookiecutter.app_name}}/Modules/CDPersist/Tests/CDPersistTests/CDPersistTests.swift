@@ -8,4 +8,4 @@
 import XCTest
 @testable import CDPersist
 
-final class CDPersistTests: XCTestCase {}
+final class CDPersistTests: XCTestCase { }

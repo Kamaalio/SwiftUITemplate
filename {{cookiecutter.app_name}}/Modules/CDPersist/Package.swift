@@ -9,7 +9,8 @@ let package = Package(
     products: [
         .library(
             name: "CDPersist",
-            targets: ["CDPersist"]),
+            targets: ["CDPersist"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/Kamaalio/KamaalSwift.git", "0.2.0" ..< "0.3.0"),
@@ -22,9 +23,11 @@ let package = Package(
                 .product(name: "KamaalExtensions", package: "KamaalSwift"),
                 .product(name: "KamaalCoreData", package: "KamaalSwift"),
                 "Models",
-            ]),
+            ]
+        ),
         .testTarget(
             name: "CDPersistTests",
-            dependencies: ["CDPersist"]),
+            dependencies: ["CDPersist"]
+        ),
     ]
 )

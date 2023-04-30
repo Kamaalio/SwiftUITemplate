@@ -14,7 +14,8 @@ struct ContentView: View {
             stack: [] as [Screens],
             root: { screen in MainView(screen: screen) },
             subView: { screen in MainView(screen: screen, displayMode: .inline) },
-            sidebar: { Sidebar() })
+            sidebar: { Sidebar() }
+        )
     }
 }
 

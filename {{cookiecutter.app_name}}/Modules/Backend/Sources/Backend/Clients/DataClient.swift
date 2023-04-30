@@ -1,6 +1,6 @@
 //
 //  DataClient.swift
-//  
+//
 //
 //  Created by {{cookiecutter.full_name}} on {{cookiecutter.creation_date}}.
 //
@@ -27,7 +27,7 @@ public class DataClient<Model: Crudable> {
     }
 
     public func create(_ payload: Model.Payload) -> Result<Model.ReturnType, DataClientErrors> {
-        createUnmapped(payload, save: true).map({ $0.asReturnType as! Model.ReturnType })
+        createUnmapped(payload, save: true).map { $0.asReturnType as! Model.ReturnType }
     }
 
     func createUnmapped(_ payload: Model.Payload, save: Bool) -> Result<Model.OwnType, DataClientErrors> {
@@ -43,16 +43,16 @@ public class DataClient<Model: Crudable> {
 
     public func update(by id: UUID, with payload: Model.Payload) -> Result<Model.ReturnType, DataClientErrors> {
         updateUnmapped(by: id, with: payload)
-            .map({ $0.asReturnType as! Model.ReturnType })
+            .map { $0.asReturnType as! Model.ReturnType }
     }
 
     func updateUnmapped(by id: UUID, with payload: Model.Payload) -> Result<Model.OwnType, DataClientErrors> {
         let findResult = findUnmapped(by: id)
         let item: Model.OwnType?
         switch findResult {
-        case .failure(let failure):
+        case let .failure(failure):
             return .failure(failure)
-        case .success(let success):
+        case let .success(success):
             item = success
         }
 
@@ -76,11 +76,11 @@ public class DataClient<Model: Crudable> {
             return .failure(.fetchFailure(context: error))
         }
 
-        return .success(items.compactMap({ $0.asReturnType as? Model.ReturnType }))
+        return .success(items.compactMap { $0.asReturnType as? Model.ReturnType })
     }
 
     public func find(by id: UUID) -> Result<Model.ReturnType?, DataClientErrors> {
-        findUnmapped(by: id).map({ $0?.asReturnType as? Model.ReturnType })
+        findUnmapped(by: id).map { $0?.asReturnType as? Model.ReturnType }
     }
 
     private func findUnmapped(by id: UUID) -> Result<Model.OwnType?, DataClientErrors> {

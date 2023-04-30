@@ -1,6 +1,6 @@
 //
 //  CoreItem.swift
-//  
+//
 //
 //  Created by {{cookiecutter.full_name}} on {{cookiecutter.creation_date}}.
 //
@@ -37,7 +37,8 @@ public class CoreItem: NSManagedObject, ManuallyManagedObject, Identifiable, Cor
         try create(payload, from: context, save: true)
     }
 
-    public static func create(_ payload: Payload, from controller: PersistenceController, save: Bool) throws -> CoreItem {
+    public static func create(_ payload: Payload, from controller: PersistenceController,
+                              save: Bool) throws -> CoreItem {
         let item = CoreItem(context: controller.context)
             .updateValues(payload)
 
@@ -50,7 +51,7 @@ public class CoreItem: NSManagedObject, ManuallyManagedObject, Identifiable, Cor
         return item
     }
 
-    func updateValues(_ payload: Payload) -> CoreItem {
+    func updateValues(_: Payload) -> CoreItem {
         let now = Date()
         updateDate = now
 

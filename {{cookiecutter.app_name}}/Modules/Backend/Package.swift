@@ -9,7 +9,8 @@ let package = Package(
     products: [
         .library(
             name: "Backend",
-            targets: ["Backend"]),
+            targets: ["Backend"]
+        ),
     ],
     dependencies: [
         .package(path: "../CDPersist"),
@@ -21,9 +22,11 @@ let package = Package(
             dependencies: [
                 "CDPersist",
                 "Models",
-            ]),
+            ]
+        ),
         .testTarget(
             name: "BackendTests",
-            dependencies: ["Backend"]),
+            dependencies: ["Backend"]
+        ),
     ]
 )
