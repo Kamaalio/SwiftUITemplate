@@ -37,14 +37,6 @@ struct MainView: View {
     }
 }
 
-struct AppSettingsScreen: View {
-    @EnvironmentObject private var userData: UserData
-
-    var body: some View {
-        SettingsScreen(configuration: userData.settingsConfiguration)
-    }
-}
-
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(screen: .home)

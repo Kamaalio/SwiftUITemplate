@@ -56,7 +56,7 @@ git_modules = parse_git_modules()
 git_modules_processes: List[subprocess.Popen[bytes]] = []
 for git_module in git_modules:
     command = make_command(
-        [f"cd {git_module['path']}", f"git clone {git_module['url']} ."]
+        [f"mkdir -p {git_module['path']}", f"cd {git_module['path']}", f"git clone {git_module['url']} ."]
     )
     process = execute_command("sh", command)
     git_modules_processes.append(process)

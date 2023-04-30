@@ -20,3 +20,15 @@ acknowledgements:
 generate:
     just acknowledgements
     just localize
+
+build:
+    #!/bin/sh
+
+    just generate
+
+    CONFIGURATION="Debug"
+    WORKSPACE="{{cookiecutter.app_name}}.xcworkspace"
+    SCHEME="{{cookiecutter.app_name}}"
+
+    # set -o pipefail && xcodebuild -configuration $CONFIGURATION -workspace $WORKSPACE -scheme $SCHEME -destination $DESTINATION | xcpretty
+    xcodebuild -configuration $CONFIGURATION -workspace $WORKSPACE -scheme $SCHEME -destination $DESTINATION

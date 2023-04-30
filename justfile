@@ -9,5 +9,4 @@ setup-dev-env:
 create-template:
     rm -rf Template
     . .venv/bin/activate
-    cookiecutter .
-    rm -rf Template/.git
+    .venv/bin/cookiecutter --no-input . || exit 1
