@@ -1,12 +1,16 @@
 {
-  "name": "{{cookiecutter.app_name}}",
+  "name": "{{cookiecutter.app_name|lower}}",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "author": "{{cookiecutter.full_name}}",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@kamaal111/localize": "^0.1.0"
+    "@kamaal111/localize": "^0.1.0",
+    "git-format-staged": "^3.0.0",
+    "husky": "^8.0.1"
   }
 }

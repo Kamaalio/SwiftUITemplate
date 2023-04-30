@@ -7,5 +7,7 @@ setup-dev-env:
     python3 $SCRIPT_PATH
 
 create-template:
+    rm -rf Template
     . .venv/bin/activate
     cookiecutter .
+    rm -rf Template/.git

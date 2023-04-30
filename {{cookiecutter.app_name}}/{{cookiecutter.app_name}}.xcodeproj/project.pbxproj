@@ -202,6 +202,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CB0273529FD58E20000F5AD /* Build configuration list for PBXNativeTarget "{{cookiecutter.app_name}}" */;
 			buildPhases = (
+				2CE62EF229FEBF140063BE1D /* Pre Compile */,
 				2CB0272229FD58DF0000F5AD /* Sources */,
 				2CB0272329FD58DF0000F5AD /* Frameworks */,
 				2CB0272429FD58DF0000F5AD /* Resources */,
@@ -275,6 +276,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CE62EF229FEBF140063BE1D /* Pre Compile */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Pre Compile";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = " if which swiftlint >/dev/null; then\n     swiftlint lint --quiet $@ | sed 's/error: /warning: /g'\n else\n     echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2CB0272229FD58DF0000F5AD /* Sources */ = {
